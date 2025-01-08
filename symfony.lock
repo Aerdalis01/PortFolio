@@ -1,29 +1,14 @@
 {
-    "doctrine/doctrine-bundle": {
-        "version": "2.13",
+    "nyholm/psr7": {
+        "version": "1.8",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
-            "version": "2.13",
-            "ref": "8d96c0b51591ffc26794d865ba3ee7d193438a83"
+            "version": "1.0",
+            "ref": "4a8c0345442dcca1d8a2c65633dcf0285dd5a5a2"
         },
         "files": [
-            "config/packages/doctrine.yaml",
-            "src/Entity/.gitignore",
-            "src/Repository/.gitignore"
-        ]
-    },
-    "doctrine/doctrine-migrations-bundle": {
-        "version": "3.3",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "3.1",
-            "ref": "1d01ec03c6ecbd67c3375c5478c9a423ae5d6a33"
-        },
-        "files": [
-            "config/packages/doctrine_migrations.yaml",
-            "migrations/.gitignore"
+            "config/packages/nyholm_psr7.yaml"
         ]
     },
     "phpunit/phpunit": {
@@ -54,6 +39,15 @@
             "config/packages/asset_mapper.yaml",
             "importmap.php"
         ]
+    },
+    "symfony/azure-mailer": {
+        "version": "7.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "7.1",
+            "ref": "08cc5318ae458525c88fcdd1b2481da4f4833187"
+        }
     },
     "symfony/console": {
         "version": "7.2",

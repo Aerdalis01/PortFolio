@@ -1,0 +1,165 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block content %}
+	<!-- Masthead-->
+	<header class="masthead">
+		<div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+			<div class="d-flex justify-content-center">
+				<div class="text-center">
+					<h1 class="mx-auto my-0 text-uppercase">Audric Caillon</h1>
+					<h2 class="text-white-50 mx-auto mt-2 mb-5">Découvrez mes projets.</h2>
+					<a href="{{ path('download_cv') }}" class="btn btn-primary">
+						Télécharger mon CV
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- About-->
+	<section class="about-section text-center" id="about">
+		<div class="container px-4 px-lg-5">
+			<div class="row gx-4 gx-lg-5 d-flex justify-content-center align-items-center">
+				<div class="col-lg-8">
+					<h2 class="text-white mb-4">Développeur web junior</h2>
+					<p class="text-white-50">
+						Curieux et passionné par l’apprentissage, je suis constamment à la recherche de nouvelles connaissances pour élargir mes compétences. Les défis ne me font pas peur, au contraire, ils sont pour moi une opportunité de progresser et de me surpasser.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects-->
+	<section class="projects-section bg-light" id="projects">
+		<div
+			class="container px-4 px-lg-5 text-center">
+			<!-- Project rows... -->
+			<h2 class="text-dark mb-4">Mes projets</h2>
+			<div class="row gx-0">
+				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+					<video class="img-fluid border" autoplay muted loop controls>
+						<source src="{{ asset('assets/uploads/zoo-arcadia.mp4') }}" type="video/mp4">
+						Votre navigateur ne prend pas en charge la lecture des vidéos.
+					</video>
+				</div>
+				<div class="col-lg-6">
+					<div class=" text-center h-100 project">
+						<div class="d-flex flex-column h-100">
+							<div class="project-text w-100 my-auto text-center">
+								<h4 class="text-dark">Zoo Arcadia, projet utilisant symfony, react, SASS et bootstrap pour créer le site d'un zoo avec Authentification par rôles, gestions des CRUD via une API, statistiques, gestion et modération des avis.
+								</h4>
+								<p class="mb-0 text-white-50">Une description de projet avec une image illustrative.</p>
+								<a href="https://github.com/Aerdalis01/Sf_Zoo_Arcadia" target="_blank" rel="noopener noreferrer">
+									<i class="fab fa-github"></i>
+									Voir le dépôt sur GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row gx-0">
+				<div class="col-lg-6 d-flex justify-content-center align-items-center">
+					<img class="img-fluid border" src="{{ asset('assets/uploads/blog-exemple.jpg') }}" alt="Image d'un blog"/>
+				</div>
+				<div class="col-lg-6">
+					<div class=" text-center h-100 project">
+						<div class="d-flex flex-column h-100">
+							<div class="project-text w-100 my-auto text-center">
+								<h4 class="text-dark">Un blog réalisé à partir de symfony et react, une construction autour d'article pouvant être commenté et modéré. Une galerie d'images, une inscription ainsi qu'une gestion des utilisateurs par l'admin.
+								</h4>
+								<p class="mb-0 text-white-50">Une description de projet avec une image illustrative.</p>
+								<a href="https://github.com/Aerdalis01/Blog" target="_blank" rel="noopener noreferrer">
+									<i class="fab fa-github"></i>
+									Voir le dépôt sur GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col gx-0">
+				<div class="col d-flex justify-content-center align-items-center ">
+					<div class="col d-flex justify-content-center align-items-center ">
+						<a href="https://github.com/Aerdalis01/JavaScript-1-banniere.git" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							Voir le dépôt sur GitHub</a>
+					</div>
+					<div class="col-6">
+						<p class="mx-3 my-0">Mini projet javascript: bannière</p>
+					</div>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center mx-auto">
+					<div class="col d-flex justify-content-center align-items-center ">
+						<a href="https://github.com/Aerdalis01/JavaScript-2-btnAbonne.git" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							Voir le dépôt sur GitHub</a>
+					</div>
+					<div class="col-6">
+						<p class="mx-3 my-0">Mini projet javascript: btnAbonne</p>
+					</div>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center mx-auto">
+					<div class="col d-flex justify-content-center align-items-center ">
+						<a href="https://github.com/Aerdalis01/JavaScript-3-darkmode.git" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							Voir le dépôt sur GitHub</a>
+					</div>
+					<div class="col-6">
+						<p class="mx-3 my-0">Mini projet javascript: darkMode</p>
+					</div>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center mx-auto">
+					<div class="col d-flex justify-content-center align-items-center ">
+						<a href="https://github.com/Aerdalis01/Javascript.git" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							Voir le dépôt sur GitHub</a>
+					</div>
+					<div class="col-6">
+						<p class="mx-3 my-0">Mini projet javascript: (BurgerMenu, Modal, Connexion & cookies... )</p>
+					</div>
+				</div>
+				<div class="col d-flex justify-content-center align-items-center mx-auto">
+					<div class="col d-flex justify-content-center align-items-center ">
+						<a href="https://github.com/Aerdalis01/Planity.git" target="_blank" rel="noopener noreferrer">
+							<i class="fab fa-github"></i>
+							Voir le dépôt sur GitHub</a>
+					</div>
+					<div class="col-6">
+						<p class="mx-3 my-0">Projet de recodage d'un site avec Html, Sass, Bootstrap, Js</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Signup-->
+<section class="signup-section" id="signup">
+	<div class="container px-4 px-lg-5">
+		<div class="row gx-4 gx-lg-5">
+			<div class="col-md-10 col-lg-8 mx-auto text-center align-items-center">
+				<i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+				<h2 class="text-white mb-5">Vous souhaitez me contacter ?</h2>
+				<form class="form-signup" id="contactForm">
+					<div class="row mb-3">
+						<div class="col">
+							<input class="form-control" id="emailAddress" type="email" placeholder="Entrer votre adresse Email..." aria-label="Enter email address..." required/>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<div class="col">
+							<textarea class="form-control" id="message" placeholder="Votre message..." rows="4" required></textarea>
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center mx-auto">
+						<div class="col-auto">
+							<button class="btn btn-primary" id="submitButton" type="submit">Envoyer</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>{% endblock %}

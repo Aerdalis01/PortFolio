@@ -6,6 +6,8 @@
 parameters:
 
 services:
+    Nyholm\Psr7\Factory\Psr17Factory:
+        class: Nyholm\Psr7\Factory\Psr17Factory
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
@@ -19,6 +21,16 @@ services:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
+    
+    App\Infrastructure\Email\Office365OAuthTokenProvider:
+        $tenant: '%env(resolve:EMAIL_TENANT)%'
+        $clientId: '%env(resolve:EMAIL_CLIENT_ID)%'
+        $clientSecret: '%env(resolve:EMAIL_CLIENT_SECRET)%'
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    App\Infrastructure\Email\OAuthEsmtpTransportFactoryDecorator:
+        decorates: mailer.transport_factory.smtp
+        arguments:
+            $inner: '@.inner'
+            $authenticator: '@App\Infrastructure\Email\XOAuth2Authenticator'
+
+   
